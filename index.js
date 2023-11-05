@@ -1,4 +1,4 @@
-columns=26;
+ let columns=26;
 let header=document.querySelector(".header");
 let sno=document.querySelector(".serial-no");
 let body=document.querySelector(".body");
@@ -65,6 +65,7 @@ function focusOnCell(event){
   let elementId=event.target.id;
 cellPosition.innerText=elementId;
 activeElement=event.target;
+
 if(state[elementId]){
 
  resetOptions(state[elementId]);

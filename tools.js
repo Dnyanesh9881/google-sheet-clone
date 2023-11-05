@@ -5,8 +5,8 @@ let activeElement=null;
 
 
 const defaultProperties={
-  fontfamily:'sans',
-  fontsize: 16,
+  fontfamily:'Times New Roman',
+  fontsize: 15,
   color: "#000000",
   textalignment:"left",
   bgcolor:"#ffffff",

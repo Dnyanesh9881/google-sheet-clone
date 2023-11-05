@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="./logo.ico" />
     <title>Google Sheet</title>
     <link rel="stylesheet" href="style.css" />
 
@@ -18,24 +20,20 @@
   <body>
     <section class="tools">
       <form id="form" class="options" onchange="onFormChange()">
-        <select name="fontfamily" id="fontfamily">
-          <option value="'Courier New', Courier, monospace">Courier New</option>
+        <select name="fontfamily" id="fontfamily" value="Times New Roman">
           <option value="'Times New Roman', Times, serif">
             Times New Roman
           </option>
+          <option value="'Courier New', Courier, monospace">Courier New</option>
+
           <option value="Arial, Helvetica, sans-serif">Arial Helvatica</option>
-          <!-- <option value="Arial, Helvetica, sans-serif">Arial</option> -->
-          <!-- <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option> -->
         </select>
         <input
           type="number"
           placeholder="Font Size"
           name="fontsize"
           id="fontsize"
+          value="15"
           min="5"
           max="200"
         />
@@ -132,13 +130,18 @@
             format_color_fill
           </label>
         </div>
-        <button type="button" class="material-icons" onclick="onClickExport()">cloud_upload</button>
-        <button type="button" class="material-icons">cloud_download</button>
+        <button type="button" class="material-icons" onclick="onClickExport()">
+          cloud_upload
+        </button>
+
+        <button type="button" class="material-icons" onclick="onClickImport()">
+          cloud_download
+        </button>
       </form>
       <div class="bottom-tools">
         <div class="cell-position"></div>
         <span class="material-symbols-outlined"> function </span>
-        <input type="text" placeholder="  f (x)" />
+        <input type="text" placeholder="  f (x)" id="function" />
       </div>
     </section>
 
@@ -149,8 +152,13 @@
         <div class="body"></div>
       </div>
     </section>
+    
+    <section class="sheets">
+      <span class="material-icons" onclick="onClickAddSheet()"> post_add </span>
+    </section>
     <script src="./index.js"></script>
     <script src="tools.js"></script>
     <script src="export-import.js"></script>
+    <script src="function.js"></script>
   </body>
 </html>

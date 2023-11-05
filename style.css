@@ -1,37 +1,46 @@
 *{
     padding:0 ;
     margin: 0;
+    box-sizing: border-box;
     ::-webkit-scrollbar{
         display: none;
     }
-}
+    
+}  
+
 .main-container{
     width: 100vw;
-    height: 80vh;
+    height: 82vh;
     color: #444746;
     border:1px solid #e1e1e1;
-    overflow: scroll;
+   overflow: scroll;
 }
 .header{
     display: flex;
     text-align: center;
     position: sticky;
     top: 0;
-    background-color: #ffffff;
     z-index: 1;
+    background-color: #ffffff;
+    
 }
 .cell{
     min-width: 80px;
     padding: 5px;
     border: 1px solid #e1e1e1;
+    background-color: #edf2fa;
 }
 .serial-no{
     display: flex;
     flex-direction: column;
     position: sticky;
     left: 0;
-    background-color: #ffffff;
     text-align: center;
+    background-color: #edf2fa;
+    
+}
+.body{
+    background-color: #ffffff !important;
 }
 .body-row{
     display: flex;
@@ -39,12 +48,15 @@
 }
 .main{
     display: flex;
+    
 }
 .header>div:nth-child(1){
     position: sticky;
     left: 0;
     top: 0;
     background-color: #ffffff;
+    border-bottom: 5px solid lightgray;
+    border-right:5px solid lightgray ;
 }
 .options{
     display:flex;
@@ -55,6 +67,7 @@
 .bottom-tools{
     display: flex;
     padding: 0.4rem;
+    /* background-color: #edf2fa; */
 }
 .bottom-tools> input{
     flex-grow: 1;
@@ -86,10 +99,15 @@
 .hidden:checked + label{
     background-color: #e1e1e1;
 }
+#form{
+    background-color: #edf2fa;
+    overflow: scroll;
+}
 #form>button{
     background-color: transparent;
     border: none;
     cursor: pointer;
     padding: 0.4rem;
     border-radius: 5px;
+   overflow: scroll;
 }

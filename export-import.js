@@ -9,3 +9,22 @@ let url=URL.createObjectURL(file);
   a.click();
 
 }
+
+function onClickImport(){
+  var fileInput = document.createElement('Input');
+  fileInput.type="file"
+  fileInput.click();
+
+  fileInput.addEventListener('change', function(event) {
+    var file = event.target.files[0];
+    var reader = new FileReader();
+
+    reader.onload = function() {
+      var content = reader.result;
+      google.script.run.processFile(content);
+    }
+
+    reader.readAsText(file);
+  });
+}
+
